@@ -1,0 +1,86 @@
+.nv-main {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top:0;
+    right: 0;
+    display: flex;
+    z-index: 2;
+}
+.nv-ctn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+.nv-icn {
+    font-size: 20px;
+
+}
+.nv-name {
+    font-size: 14px;
+}
+.nv-menu-ctn {
+    display: flex;
+    align-items: center;
+    gap:15px;
+}
+.nv-bg-ctn {
+    display: flex;
+    align-items: center;
+    gap:15px;
+    padding-top: 10px ;
+}
+.nv-logo {
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+.nv-bg {
+    width: 150px;
+    height: 100%;
+    position: fixed;
+    top:0;
+    z-index: 4;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+.nv-on {
+    left: 0;
+}
+.nv-off {
+    left: -100%;
+}
+.nv-layer {
+    background-color: #252525a8;
+    position: fixed;
+    top:0;
+    right: 0;
+    width:100%;
+    height: 100%;
+    z-index: 3;
+}
+.nvl-on {
+    display: inherit;
+}
+.nvl-off {
+    display: none;
+}
+.nv-a-ctn {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nv-a {
+    width:80%;
+    border-radius: 5px;
+    padding:10px 15px;
+    text-decoration: inherit;
+    font-size: 13px;
+}
+.nv-a:hover {
+    background-color: #ffffff32;
+}

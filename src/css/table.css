@@ -1,0 +1,29 @@
+.tb-main {
+    width:100%;
+    overflow: auto;
+    position: relative;
+}
+.tb-prnt {
+    width:100%;
+    display: flex;
+    gap:1px;
+}
+.tbh {
+    min-width: 240px;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+}
+.tbd {
+    min-width: 240px;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 13px;
+}
+.tbd:hover {
+    filter: brightness(.9);
+}
+.tb-ab {
+    position: sticky;
+    top:0;
+}

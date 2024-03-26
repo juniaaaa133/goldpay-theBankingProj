@@ -1,0 +1,13 @@
+.cta-prent{
+    width: 100%;
+    height: fit-content;
+    padding:20px 0;
+    border-radius: 5px;
+    text-decoration: inherit;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+}
+.cta-prent:hover {
+    filter: brightness(.9);
+}

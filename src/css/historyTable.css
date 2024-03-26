@@ -1,0 +1,15 @@
+.tbh-his {
+    min-width: 300px;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+}
+.tbd-his {
+    min-width: 300px;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 13px;
+}
+.tbd-his:hover {
+    filter: brightness(.9);
+}

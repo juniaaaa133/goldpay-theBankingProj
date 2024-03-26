@@ -1,0 +1,17 @@
+.usr-main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    gap:10px
+
+}
+.usr-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+
+}
+@media (max-width: 480px) {
+    .usr-main{
+        padding: 0 20px;
+    }
+}
