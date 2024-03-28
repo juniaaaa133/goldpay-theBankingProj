@@ -1,0 +1,28 @@
+.ud-main {
+    width:60%;
+    height: fit-content;
+    padding:9px 12px;
+    position: absolute;
+    top:0;left:0;right:0;bottom:0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 80px;
+}
+.ud-parent {
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.ud-label {
+    font-size: 13px;
+}
+.ud-inp {
+    width:90%
+}
+.ud-btn-ctn{
+    width:150px;
+}

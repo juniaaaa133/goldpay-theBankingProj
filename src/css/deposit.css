@@ -1,0 +1,148 @@
+/* Deposit == Withdraw css */
+
+.dp-main {
+    margin-top: 100px;
+    padding: 0 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.dp-srh-ctn {
+    width: 32%;
+    height: fit-content;
+    margin-bottom: 50px;
+
+}
+.dp-srh {
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    align-items: center;
+}
+
+.srh-ctn {
+    width:95%;
+    margin-right: 12px;
+}
+.dp-result-ctn {
+    width: 100%;
+    height: fit-content;
+margin-top: 10px;
+border-radius: 5px;
+}
+.dp-result {
+    display: flex;
+    gap:10px;
+    padding:12px 10px;
+}
+.dp-result:hover {
+    opacity: .7;
+}
+.dp-info-ctn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+.dp-usr-icn {
+    padding: 8px;
+    border-radius: 50%;
+border  :solid 1.4px #F5F5F5;
+color: #F5F5F5;
+}
+.dp-name {
+    font-size: 14px;
+}
+.dp-ph {
+    font-size: 12px;
+}
+.dp-popup-ctn {
+    width: 48%;
+    height: fit-content;
+    
+}
+.dp-pops {
+    display: flex;
+    flex-direction: column;
+    gap:80px;
+    padding:20px 12px;
+}
+.dp-pop-title {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.dp-pop-type {
+    font-size: 14px;
+}
+.dp-pop-name {
+    padding: 9px 23px;
+    font-size: 12px;
+    width: fit-content;
+    border-radius: 5px;
+}
+.dp-pop-amt {
+    font-size: 13px;
+}
+.dp-pop-form-ctn{
+display: flex;
+gap: 30px;
+align-items: center;
+}
+.dp-pop-inp-ctn {
+    width: 200px;
+}
+.dp-pop-amt-ctn {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+    gap: 6px;
+}
+.dp-pop-amts {
+    width: 100%;
+    height: fit-content;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}
+.dp-pop-amts:hover {
+    opacity: .7;
+}
+@media (max-width: 768px) {
+    .dp-srh-ctn {
+        width: 320px;
+       
+    }
+    .dp-popup-ctn {
+        width: 100%;
+       
+    }
+    .dp-main {
+        justify-content: center;
+    }
+    .dp-pop-amt-ctn {
+        display: grid;
+        grid-template-columns: 24% 24% 24% 24%;
+        justify-content: center;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 520px) {
+    .dp-pop-amt-ctn {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        justify-content: center;
+        gap: 6px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .dp-main {
+        padding: 0 20px;
+    }
+    .dp-srh-ctn {
+        width: 100%;
+       
+    }
+}

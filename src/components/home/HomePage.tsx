@@ -35,10 +35,10 @@ FetchData();
     <div className='hm-main bar'>
       <div className="cta-ctn">
         <div className="cta-w">
-        <Cta text='Withdraw' url='/' />
+        <Cta text='Withdraw' url='/withdraw' />
         </div>
         <div className="cta-w">
-        <Cta text='Deposit' url='/' />
+        <Cta text='Deposit' url='/deposit' />
         </div>
         <div className="cta-w">
         <Cta text='Transfer' url='/' />

@@ -4,4 +4,7 @@
 @import './table.css';
 @Import './cta.css';
 @import './users.css';
+@import './userDetail.css';
+@import './deposit.css';
+@import './emptyui.css';
 @import './historyTable.css';

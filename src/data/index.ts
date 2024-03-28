@@ -139,3 +139,52 @@ export const dummy_history_data : {
         date : '15.2.23'
     },
 ]
+
+export const dummy_users : {
+id: number ,
+name : string,
+phone : string,
+amount : number,
+account_no : string,
+}[] = [
+{
+  id: 1, 
+  name : "Rein Ogga Myo",
+  phone : '09953523241',
+  amount : 30000,
+  account_no : 'AVS#4idi88',
+
+},
+{
+  id: 2, 
+  name : "Aster Zaw",
+  phone : '09794302034',
+  amount : 9000,
+  account_no : 'AVS#4idi88',
+
+},
+{
+  id: 3, 
+  name : "Ma Sabal",
+  phone : '09420154991',
+  amount : 500000,
+  account_no : 'AVS#4idi88',
+
+},
+{
+  id: 4, 
+  name : "Ma Ma Ka Lay Lay",
+  phone : '09450083743',
+  amount : 5000,
+  account_no : 'AVS#4idi88',
+
+},
+{
+  id: 5, 
+  name : " Zayar Lynn ",
+  phone : '099632383741',
+  amount : 180000,
+  account_no : 'AVS#4idi88',
+
+},
+]
