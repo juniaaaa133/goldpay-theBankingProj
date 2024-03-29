@@ -1,0 +1,135 @@
+.tr-main {
+        margin-top: 100px;
+        padding: 0 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+}
+
+.tr-srh-ctn {
+    width: 32%;
+    height: fit-content;
+    margin-bottom: 50px;
+
+}
+.tr-label-ctn {
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    margin-bottom: 10px;
+}
+.tr-title {
+    font-size: 13px;
+}
+.tr-label {
+    font-size: 12px;
+}
+.tr-srh {
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    align-items: center;
+}
+
+.tr-result-ctn {
+    width: 100%;
+    height: fit-content;
+margin-top: 10px;
+border-radius: 5px;
+}
+.tr-result {
+    display: flex;
+    gap:10px;
+    padding:12px 10px;
+}
+.tr-result:hover {
+    opacity: .7;
+}
+
+.tr-info-ctn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+.tr-usr-icn {
+    padding: 8px;
+    border-radius: 50%;
+border  :solid 1.4px #F5F5F5;
+color: #F5F5F5;
+}
+.tr-name {
+    font-size: 14px;
+}
+.tr-ph {
+    font-size: 12px;
+}
+.tr-popup-ctn {
+    width: 48%;
+    height: fit-content;
+    
+}
+.tr-pop-payeer-ctn {
+    width:200px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.tr-payee {
+    width:200px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:12px 10px;
+    border-radius: 10px;
+    border :solid 2px #122B43;
+}
+
+.tr-payee-info-ctn {
+    display: flex;
+    gap:10px;
+
+}
+.cancel {
+    font-size: 15px;
+    transform: rotate(45deg);
+}
+@media (max-width: 768px) {
+    .tr-srh-ctn {
+        width: 320px;
+       
+    }
+    .tr-popup-ctn {
+        width: 100%;
+       
+    }
+    .tr-main {
+        justify-content: center;
+    }
+    .tr-pop-amt-ctn {
+        display: grid;
+        grid-template-columns: 24% 24% 24% 24%;
+        justify-content: center;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 520px) {
+    .tr-pop-amt-ctn {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        justify-content: center;
+        gap: 6px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .tr-main {
+        padding: 0 20px;
+    }
+    .tr-srh-ctn {
+        width: 100%;
+       
+    }
+}

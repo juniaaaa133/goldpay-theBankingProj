@@ -6,5 +6,7 @@
 @import './users.css';
 @import './userDetail.css';
 @import './deposit.css';
+@import './transfer.css';
 @import './emptyui.css';
 @import './historyTable.css';
+@import './setting.css';

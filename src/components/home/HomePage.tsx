@@ -49,7 +49,7 @@ FetchData();
         <div className="hm-tb-title main-f fontcl"> New Users</div>
         <div className="hm-tb-add-usr main-f bg-sec mega-trans">
 <FaUserPlus className='text-[14px] fontcl '/>
-<Link className='hm-tb-add-txt fontcl' href='/' >Add</Link>
+<Link className='hm-tb-add-txt fontcl' href='/create-user' >Add</Link>
         </div>
         <Table h='300px' data={tableData}/>
       </div>

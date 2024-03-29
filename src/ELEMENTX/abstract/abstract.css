@@ -52,7 +52,9 @@ body {  scroll-behavior: smooth; padding: 0; margin: 0; background-color: var(--
 .fontclDH {color:--fclD;}
 .fontclDH:hover {color:var(--fcl2);}
 
-
+.hidden {
+    display: none;
+}
 .btnf {font-size: 14px; font-weight: 600;}
 .frame {
     padding: 0 40px;
@@ -97,6 +99,19 @@ body {  scroll-behavior: smooth; padding: 0; margin: 0; background-color: var(--
     color : var(--fcl);
 }
 .btn1:hover {
+    background-color: inherit;
+}
+
+.btn2 {
+    width: 100%;
+    height: fit-content;
+    padding: 8px 20px;
+    border-radius: 2px;
+    background-color: #3d3838;
+    border: 2px solid #3d3838;
+    color : var(--fcl);
+}
+.btn2:hover {
     background-color: inherit;
 }
 .inp {

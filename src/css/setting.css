@@ -1,0 +1,36 @@
+.st-main {
+
+}
+.st-ctn {
+    position: absolute;
+    top:0;
+    right: 0;
+    left:0;
+    bottom:0;
+    margin: auto;
+    width:400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:30px;
+    padding:12px 20px;
+}
+.st-title {
+    font-size: 14px;
+}
+.st-desc {
+    font-size: 12px;
+}
+.st-inp-ctn {
+    width:300px;
+}
+.st-btn-parent {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.st-btn-ctn {
+    width:100px;
+    border-radius: 5px;
+}

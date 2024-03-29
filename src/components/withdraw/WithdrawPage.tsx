@@ -1,12 +1,15 @@
 'use client'
 import ButtonC from '@/ELEMENTX/Ui/Buttons/ButtonC'
-import React, { ChangeEvent, useState } from 'react'
+import React, { ChangeEvent, useRef, useState } from 'react'
 import { FaRegUser } from "react-icons/fa";
 import Empty from '../emptyUI/Empty';
-import { dummy_users } from '@/data';
+import { dummy_fast_amount, dummy_users } from '@/data';
+import ToggleX from '@/ELEMENTX/Ui/Toggle/ToggleX';
 
 const WithdrawPage = () => {
  
+let [isDone,setIsDone] = useState(false);
+let amountInput = useRef<HTMLInputElement>(null);
 let [isEmpty,setIsEmpty]  = useState(true);
 let [user,setUser] = useState<{
   id : number ,
@@ -46,7 +49,30 @@ let filteredUser = dummy_users.filter((data) => (
 setUser(filteredUser);
 }
 
+let GetAmountTemplate = (value: number) => {
+  if(amountInput.current){
+     amountInput.current.value = `${value}`;
+  }
+}
+
+let SubmitAction = () => {
+if(user && amountInput.current !== null ){
+  if(user.amount >= parseInt(amountInput.current.value)){
+    user.amount = user.amount -  parseInt(amountInput.current.value)
+    console.log(amountInput.current.value)
+    setIsDone(true);
+  setTimeout(() => {
+    setIsDone(false)
+  }, 3000);
+  }
+}else{
+  return;
+}
+  
+}
+
   return (
+    <>
     <div className='dp-main'>
         <div className="dp-srh-ctn">
             <div className="dp-srh">
@@ -86,26 +112,28 @@ setUser(filteredUser);
           </div>
           <div className="dp-pop-form-ctn">
 <div className="dp-pop-inp-ctn">
-<input type="text" className="inp fontcl main-f " />
+<input ref={amountInput} placeholder='$$$mmk' type="text" className="inp fontcl main-f " />
 </div>
 <div className="dp-btn-ctn">
-<button className="dp-btn btn1 trans bcu fontcl main-f text-[14px]">Withdraw</button>
+<button onClick={SubmitAction} className="dp-btn btn1 trans bcu fontcl main-f text-[14px]">Withdraw</button>
 
 </div>
           </div>
           <div className="dp-pop-amt-ctn">
-<div className="dp-pop-amts fontcl main-f bg-ter mega-trans bcu">10000</div>
-<div className="dp-pop-amts fontcl main-f bg-ter mega-trans bcu">20000</div>
-<div className="dp-pop-amts fontcl main-f bg-ter mega-trans bcu">50000</div>
-<div className="dp-pop-amts fontcl main-f bg-ter mega-trans bcu">100000</div>
-<div className="dp-pop-amts fontcl main-f bg-ter mega-trans bcu">300000</div>
-<div className="dp-pop-amts fontcl main-f bg-ter mega-trans bcu">800000</div>
+          {
+  dummy_fast_amount.map((data,index :number) => (
+    <div key={index} onClick={()=>GetAmountTemplate(data.amount)} className="dp-pop-amts fontcl main-f bg-ter mega-trans bcu">{data.amount}</div>
 
+  ))
+}
           </div>
          </div>
          }
         </div>
     </div>
+        <ToggleX open={isDone} text='Succeed!'/>
+    </>
+
   )
 }
 

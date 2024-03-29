@@ -28,7 +28,7 @@ const Table = ({data,h} : {
         </div>
       {
         data.map((table , index : number) => (
-          <Link key={index} href='/' className="trans tb-prnt ">
+          <Link key={index} href={`/user-management/${table.id}`} className="trans tb-prnt ">
           <div className="tbd fontcl3 main-f ">{table.name}</div>
           <div className="tbd fontcl3 main-f ">{table.phone_number}</div>
           <div className="tbd fontcl3 main-f ">{table.account_number}</div>

@@ -24,11 +24,11 @@ let [hasOpend, setHasOpened] = useState(false);
 <div className="nv-logo main-f fontcl2 ">Goldpay</div>
     </div>   
     <div className="nv-a-ctn">
-        <Link className='nv-a fontcl trans main-f ' href='/'>Home</Link>
-        <Link className='nv-a fontcl trans main-f ' href='/'>Transfer</Link>
-        <Link className='nv-a fontcl trans main-f ' href='/user-management'>User Management</Link>
-        <Link className='nv-a fontcl trans main-f ' href='/transcation-history'>History</Link>
-        <Link className='nv-a fontcl trans main-f ' href='/'>Setting</Link>
+        <Link onClick={()=>setHasOpened(false)} className='nv-a fontcl trans main-f ' href='/'>Home</Link>
+        <Link onClick={()=>setHasOpened(false)} className='nv-a fontcl trans main-f ' href='/transfer'>Transfer</Link>
+        <Link onClick={()=>setHasOpened(false)} className='nv-a fontcl trans main-f ' href='/user-management'>User Management</Link>
+        <Link onClick={()=>setHasOpened(false)} className='nv-a fontcl trans main-f ' href='/transcation-history'>History</Link>
+        <Link onClick={()=>setHasOpened(false)} className='nv-a fontcl trans main-f ' href='/setting'>Setting</Link>
 
     </div>
     </div>
