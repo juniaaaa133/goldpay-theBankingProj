@@ -9,7 +9,7 @@ import ToggleX from '@/ELEMENTX/Ui/Toggle/ToggleX';
 
 const TransferPage = () => {
 
-
+  let [hasError,setHasError] = useState(false);
   let [isDone,setIsDone] = useState(false);
   let amountInput = useRef<HTMLInputElement>(null);
     let [isEmpty,setIsEmpty]  = useState(true);
@@ -53,18 +53,18 @@ const TransferPage = () => {
         setSearchedUsers([])
       }else {
         let filteredUser = dummy_users.filter((data) => (
-          data.phone.includes(searchedWords) 
+          data.phone.includes(searchedWords)
         ))
         setSearchedUsers(filteredUser);
       }
     }else {
-    if(searchedWords == ''){
-        setSearchedPayees([])
+    if(searchedWords !== ''){
+      let filteredUser = dummy_users.filter((data) => (
+        data.phone.includes(searchedWords) 
+      ))
+      setSearchedPayees(filteredUser);
       }else {
-        let filteredUser = dummy_users.filter((data) => (
-          data.phone.includes(searchedWords) 
-        ))
-        setSearchedPayees(filteredUser);
+        setSearchedPayees([])
       }
 }
     }
@@ -94,11 +94,11 @@ let GetAmountTemplate = (value: number) => {
 }
 
 let SubmitAction = () => {
-if(payor && payee && amountInput.current !== null ){
+if(payor && payee && amountInput.current !== null && payor.id !== payee.id){
   if(payor.amount >= parseInt(amountInput.current.value) ){
     payee.amount = payee.amount +  parseInt(amountInput.current.value)
     payor.amount = payor.amount -  parseInt(amountInput.current.value)
-
+    setIsDone(true)
     console.log(amountInput.current.value)
     setIsDone(true);
     setTimeout(() => {
@@ -107,6 +107,7 @@ if(payor && payee && amountInput.current !== null ){
   }
 
 }else{
+  setHasError(true)
   return;
 }
 
@@ -192,8 +193,7 @@ if(payor && payee && amountInput.current !== null ){
               </div>
               ))
               }
-          
-          
+
             </div> 
           </div>
           <div className="dp-pop-form-ctn">
@@ -205,6 +205,7 @@ if(payor && payee && amountInput.current !== null ){
 
 </div>
           </div>
+          <div className={`${hasError == true ? 'tr-title' : 'hidden'}`}  style={{fontSize : '15px',color: '#ff8787', marginTop: '-50px'}}>Cannot transfer to the same person</div>
           <div className="dp-pop-amt-ctn">
           {
   dummy_fast_amount.map((data,index :number) => (
