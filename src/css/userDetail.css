@@ -26,3 +26,21 @@
 .ud-btn-ctn{
     width:150px;
 }
+@media (max-width: 768px) {
+    .ud-main {
+        width:400px;
+    }
+    .ud-parent {
+        width:80%;
+    }
+}
+@media (max-width: 480px) {
+    .ud-main {
+        width:80%;
+
+    }
+    .ud-parent {
+        width:96%;
+    }
+
+}
