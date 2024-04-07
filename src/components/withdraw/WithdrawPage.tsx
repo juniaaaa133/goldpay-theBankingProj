@@ -5,6 +5,7 @@ import { FaRegUser } from "react-icons/fa";
 import Empty from '../emptyUI/Empty';
 import { dummy_fast_amount, dummy_users } from '@/data';
 import ToggleX from '@/ELEMENTX/Ui/Toggle/ToggleX';
+import { UserType } from '@/types';
 
 const WithdrawPage = () => {
 
@@ -12,21 +13,9 @@ let [hasError,setHasError] = useState<string>('');
 let [isDone,setIsDone] = useState(false);
 let amountInput = useRef<HTMLInputElement>(null);
 let [isEmpty,setIsEmpty]  = useState(true);
-let [user,setUser] = useState<{
-  id : number ,
-  name : string,
-  phone : string,
-  amount : number,
-  account_no : string,
-}>();
+let [user,setUser] = useState<UserType>();
 
-let [searchedUsers,setSearchedUsers] = useState<{
-  id : number ,
-  name : string,
-  phone : string,
-  amount : number,
-  account_no : string,
-}[]>()
+let [searchedUsers,setSearchedUsers] = useState<UserType[]>()
 
 let FindUsers = (e : ChangeEvent<HTMLInputElement>) => {
  
