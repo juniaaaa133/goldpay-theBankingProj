@@ -9,7 +9,7 @@ import ToggleX from '@/ELEMENTX/Ui/Toggle/ToggleX';
 
 const TransferPage = () => {
 
-  let [hasError,setHasError] = useState(false);
+  let [hasError,setHasError] = useState<string>('');
   let [isDone,setIsDone] = useState(false);
   let amountInput = useRef<HTMLInputElement>(null);
     let [isEmpty,setIsEmpty]  = useState(true);
@@ -98,16 +98,18 @@ if(payor && payee && amountInput.current !== null && payor.id !== payee.id){
   if(payor.amount >= parseInt(amountInput.current.value) ){
     payee.amount = payee.amount +  parseInt(amountInput.current.value)
     payor.amount = payor.amount -  parseInt(amountInput.current.value)
-    setIsDone(true)
-    console.log(amountInput.current.value)
+    setHasError('')
     setIsDone(true);
     setTimeout(() => {
       setIsDone(false)
     }, 3000);
+  }else {
+    setHasError('invalid_balance')
+    return;
   }
 
 }else{
-  setHasError(true)
+  setHasError('invalid_person')
   return;
 }
 
@@ -205,7 +207,8 @@ if(payor && payee && amountInput.current !== null && payor.id !== payee.id){
 
 </div>
           </div>
-          <div className={`${hasError == true ? 'tr-title' : 'hidden'}`}  style={{fontSize : '15px',color: '#ff8787', marginTop: '-50px'}}>Cannot transfer to the same person</div>
+          <div className={`${hasError == 'invalid_balance' ? 'tr-title' : 'hidden'}`}  style={{fontSize : '15px',color: '#ff8787', marginTop: '-50px'}}>Please fill valid amount.</div>
+          <div className={`${hasError == 'invalid_person' ? 'tr-title' : 'hidden'}`}  style={{fontSize : '15px',color: '#ff8787', marginTop: '-50px'}}>Cannot transfer to the same person.</div>
           <div className="dp-pop-amt-ctn">
           {
   dummy_fast_amount.map((data,index :number) => (

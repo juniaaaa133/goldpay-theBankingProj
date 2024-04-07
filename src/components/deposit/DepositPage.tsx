@@ -58,7 +58,6 @@ let GetAmountTemplate = (value: number) => {
 let SubmitAction = () => {
 if(user && amountInput.current !== null ){
 user.amount = user.amount +  parseInt(amountInput.current.value)
-console.log(amountInput.current.value)
 setIsDone(true);
 setTimeout(() => {
   setIsDone(false)
