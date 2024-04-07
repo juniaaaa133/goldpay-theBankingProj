@@ -1,17 +1,9 @@
+import { UserType } from '@/types'
 import Link from 'next/link'
 import React from 'react'
 
 const Table = ({data,h} : {
-  data : {
-    id: number ,
-    name : string,
-    phone : string,
-    amount : number,
-    account_no : string,
-    state : string,
-    township: string,
-    role : string,
-    }[] ,
+  data : UserType[] ,
   h : string,
 }) => {
 

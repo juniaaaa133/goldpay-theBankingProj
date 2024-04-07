@@ -1,6 +1,19 @@
-import React from 'react'
+'use cilent'
+import { UserType } from '@/types'
+import React, { useState } from 'react'
 
-const UserDetailPage = () => {
+const UserDetailPage = ({id} : {
+    id : string,
+}) => {
+
+let [userData,setUserData] = useState<UserType>();
+
+
+let FetchData = () => {
+    //fetched api data instead of dummy data;
+    // setUserData()
+}
+
   return (
     <div className="ud-main bg-sec">
         <div className="ud-parent main-f">

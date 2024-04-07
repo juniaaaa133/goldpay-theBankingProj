@@ -6,45 +6,25 @@ import Empty from '../emptyUI/Empty';
 import { dummy_fast_amount, dummy_users } from '@/data';
 import { FiPlus } from "react-icons/fi";
 import ToggleX from '@/ELEMENTX/Ui/Toggle/ToggleX';
+import { UserType } from '@/types';
 
 const TransferPage = () => {
 
-  let [hasError,setHasError] = useState<string>('');
-  let [isDone,setIsDone] = useState(false);
-  let amountInput = useRef<HTMLInputElement>(null);
+    let [hasError,setHasError] = useState<string>('');
+    let [isDone,setIsDone] = useState(false);
     let [isEmpty,setIsEmpty]  = useState(true);
-    let [isSelectedPayee,setIsSelectedPayee] = useState(false);
-    let [payee,setpayee] = useState<{
-        id : number ,
-        name : string,
-        phone : string,
-        amount : number,
-        account_no : string,
-      }>();
 
-    let [SearchedPayees,setSearchedPayees] = useState<{
-        id : number ,
-        name : string,
-        phone : string,
-        amount : number,
-        account_no : string,
-      }[]>()
-
-    let [payor,setPayor] = useState<{
-      id : number ,
-      name : string,
-      phone : string,
-      amount : number,
-      account_no : string,
-    }>();
+    let amountInput = useRef<HTMLInputElement>(null);
     
-    let [searchedUsers,setSearchedUsers] = useState<{
-      id : number ,
-      name : string,
-      phone : string,
-      amount : number,
-      account_no : string,
-    }[]>()
+    //Payee
+    let [isSelectedPayee,setIsSelectedPayee] = useState(false);
+    let [searchedUsers,setSearchedUsers] = useState<UserType[]>()
+    let [payee,setpayee] = useState<UserType>();
+
+    //Payor
+    let [SearchedPayees,setSearchedPayees] = useState<UserType[]>()
+    let [payor,setPayor] = useState<UserType>();
+    
     
     let FindUsers = (e : ChangeEvent<HTMLInputElement>,isPayee : boolean) => {
     let searchedWords = e.currentTarget.value;

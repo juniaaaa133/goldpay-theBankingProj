@@ -1,14 +1,9 @@
+import { TransHistoryType } from '@/types'
 import Link from 'next/link'
 import React from 'react'
 
 const HistoryTable = ({data} : {
-    data : {
-        id : number,
-        balance : number,
-        from_account : string,
-        to_account : string,
-        date : string,
-    }[]
+    data : TransHistoryType[]
 }) => {
   return (
     <div className="tb-main bg-sec" style={{height : '450px'}} >

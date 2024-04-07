@@ -1,11 +1,6 @@
+import { FastAmountType, TransHistoryType, UserType } from "@/types"
 
-export const dummy_history_data : {
-    id : number,
-    balance : number,
-    from_account : string,
-    to_account : string,
-    date : string,
-}[] = [
+export const dummy_history_data :TransHistoryType[] = [
     {
         id: 1,
         balance : 5000,
@@ -22,16 +17,7 @@ export const dummy_history_data : {
     },
 ]
 
-export const dummy_users : {
-id: number ,
-name : string,
-phone : string,
-amount : number,
-account_no : string,
-state : string,
-township: string,
-role : string,
-}[] = [
+export const dummy_users : UserType[] = [
 {
   id: 1, 
   name : "Rein Ogga Myo",
@@ -84,10 +70,7 @@ role : string,
 },
 ]
 
-export const dummy_fast_amount : {
-id: number,
-amount : number,
-}[] = [
+export const dummy_fast_amount : FastAmountType[] = [
   {
     id: 1,
     amount : 10000,
