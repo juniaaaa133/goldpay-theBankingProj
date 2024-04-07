@@ -9,7 +9,6 @@ let route = useRouter();
 
 useEffect(()=>{
 if(window.localStorage !== undefined){
-  console.log(sessionStorage.getItem('hi') , 'ss');
   if(sessionStorage.getItem('auth') == null){
     route.push('/login')
   }

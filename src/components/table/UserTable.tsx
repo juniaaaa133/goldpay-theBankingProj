@@ -3,14 +3,15 @@ import React from 'react'
 
 const Table = ({data,h} : {
   data : {
-    id : number,
-  name : string,
-  phone_number : string,
-  account_number : string,
-  state : string, 
-  township: string,
-  role : string,
-  }[] ,
+    id: number ,
+    name : string,
+    phone : string,
+    amount : number,
+    account_no : string,
+    state : string,
+    township: string,
+    role : string,
+    }[] ,
   h : string,
 }) => {
 
@@ -30,8 +31,8 @@ const Table = ({data,h} : {
         data.map((table , index : number) => (
           <Link key={index} href={`/user-management/${table.id}`} className="trans tb-prnt ">
           <div className="tbd fontcl3 main-f ">{table.name}</div>
-          <div className="tbd fontcl3 main-f ">{table.phone_number}</div>
-          <div className="tbd fontcl3 main-f ">{table.account_number}</div>
+          <div className="tbd fontcl3 main-f ">{table.phone}</div>
+          <div className="tbd fontcl3 main-f ">{table.account_no}</div>
           <div className="tbd fontcl3 main-f ">{table.state}</div>
           <div className="tbd fontcl3 main-f ">{table.township}</div>
           <div className="tbd fontcl3 main-f ">{table.role}</div>

@@ -3,22 +3,25 @@ import Cta from '../cta/Cta'
 import Table from '../table/UserTable'
 import { FaUserPlus } from "react-icons/fa";
 import Link from 'next/link';
-import { dummy_table_data } from '@/data';
+import { dummy_users } from '@/data';
 
 const HomePage = () => {
 
 let [tableData,setTableData] = useState<{
-  id : number,
-name : string,
-phone_number : string,
-account_number : string,
-state : string, 
-township: string,
-role : string,
-}[]>([]);
+  id: number ,
+  name : string,
+  phone : string,
+  amount : number,
+  account_no : string,
+  state : string,
+  township: string,
+  role : string,
+  }[]>([]);
 
+//Fetch api data in real time;
 let FetchData = () => {
-let filtered_data = dummy_table_data
+//Fetched filtered api data instead of dummy data;
+let filtered_data = dummy_users
 .sort((a,b) => b.id - a.id)
 .filter((data,index: number) =>(
   index < 6 
