@@ -4,17 +4,25 @@ export const dummy_history_data :TransHistoryType[] = [
     {
         id: 1,
         balance : 5000,
-        from_account : 'Kyaw Kyaw',
-        to_account : "John Pork",
-        date : '15.2.23'
+        from_account : 'William Jack',
+        to_account : "Rein Ogga Myo",
+        date : '15.2.2023'
     },
     {
-        id: 1,
-        balance : 5000,
-        from_account : 'Kyaw Kyaw',
-        to_account : "John Pork",
-        date : '15.2.23'
+        id: 2,
+        balance : 300000,
+        from_account : 'Mrs. Rose',
+        to_account : "Kyaw Zaya",
+        date : '25.2.2023'
     },
+    {
+      id: 3,
+      balance : 1000,
+      from_account : 'Nwe',
+      to_account : "Tun Kyaw",
+      date : '8.8.23'
+  },
+
 ]
 
 export const dummy_users : UserType[] = [
@@ -26,7 +34,7 @@ export const dummy_users : UserType[] = [
   account_no : 'AVS#4idi88',
   state : "Yangon",
   township : "South Okkalapa",
-  role : "User",
+  role : "Admin",
   email : 'example@gmail.com',
   password : 'hello123',
 },
