@@ -7,7 +7,8 @@ import { dummy_fast_amount, dummy_users } from '@/data';
 import ToggleX from '@/ELEMENTX/Ui/Toggle/ToggleX';
 
 const WithdrawPage = () => {
- 
+
+let [hasError,setHasError] = useState<string>('');
 let [isDone,setIsDone] = useState(false);
 let amountInput = useRef<HTMLInputElement>(null);
 let [isEmpty,setIsEmpty]  = useState(true);
@@ -59,11 +60,14 @@ let SubmitAction = () => {
 if(user && amountInput.current !== null ){
   if(user.amount >= parseInt(amountInput.current.value)){
     user.amount = user.amount -  parseInt(amountInput.current.value)
-    console.log(amountInput.current.value)
     setIsDone(true);
+    setHasError('');
   setTimeout(() => {
     setIsDone(false)
   }, 3000);
+  }else {
+    setHasError('invalid_balance')
+    return;
   }
 }else{
   return;
@@ -94,8 +98,6 @@ if(user && amountInput.current !== null ){
               </div>
               ))
               }
-          
-          
             </div>
         </div>
         <div className="dp-popup-ctn bg-sec">
@@ -119,6 +121,7 @@ if(user && amountInput.current !== null ){
 
 </div>
           </div>
+          <div className={`${hasError == 'invalid_balance' ? 'tr-title' : 'hidden'}`}  style={{fontSize : '15px',color: '#ff8787', marginTop: '-50px'}}>Please fill valid amount.</div>
           <div className="dp-pop-amt-ctn">
           {
   dummy_fast_amount.map((data,index :number) => (
