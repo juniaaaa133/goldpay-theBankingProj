@@ -4,19 +4,11 @@ import React, { useEffect, useState } from 'react'
 import { FaUserPlus } from 'react-icons/fa'
 import Table from '../table/UserTable'
 import { dummy_users } from '@/data'
+import { UserType } from '@/types'
 
 const UserPage = () => {
 
-  let [tableData,setTableData] = useState<{
-    id: number ,
-    name : string,
-    phone : string,
-    amount : number,
-    account_no : string,
-    state : string,
-    township: string,
-    role : string,
-    }[]>([]);
+  let [tableData,setTableData] = useState<UserType[]>([]);
   
   //Fetch api data in real time;
   let FetchData = () => {

@@ -26,7 +26,9 @@ export const dummy_users : UserType[] = [
   account_no : 'AVS#4idi88',
   state : "Yangon",
   township : "South Okkalapa",
-  role : "User"
+  role : "User",
+  email : 'example@gmail.com',
+  password : 'hello123',
 },
 {
   id: 5, 
@@ -36,7 +38,9 @@ export const dummy_users : UserType[] = [
   account_no : 'ss&f9888',
   state : "Yangon",
   township : "North Dagon",
-  role : "User"
+  role : "User",
+  email : 'example@gmail.com',
+  password : 'password123',
 },
 {
   id: 51, 
@@ -46,7 +50,9 @@ export const dummy_users : UserType[] = [
   account_no : '4FF4021',
   state : "Yangon",
   township : "South Dagon",
-  role : "User"
+  role : "User",
+  email : 'example@gmail.com',
+  password : 'password123',
 },
 {
   id: 52, 
@@ -56,7 +62,9 @@ export const dummy_users : UserType[] = [
   account_no : 'DF9383ls8',
   state : "Yangon",
   township : "South Okkalapa",
-  role : "User"
+  role : "User",
+  email : 'example@gmail.com',
+  password : 'password123',
 },
 {
   id: 54, 
@@ -66,7 +74,9 @@ export const dummy_users : UserType[] = [
   account_no : 'F439888',
   state : "Yangon",
   township : "South Okkalapa",
-  role : "User"
+  role : "User",
+  email : 'example@gmail.com',
+  password : 'password123',
 },
 ]
 
